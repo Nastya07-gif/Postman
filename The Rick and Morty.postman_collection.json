@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "1b9a6513-927c-4e86-86d3-5b370abae3f2",
+		"name": "The Rick and Morty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44593204"
+	},
+	"item": [
+		{
+			"name": "Character",
+			"item": [
+				{
+					"name": "Jacob",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rickandmortyapi.com/api/character?name=Jacob",
+							"protocol": "https",
+							"host": [
+								"rickandmortyapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"character"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Jacob"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alien genderless character",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rickandmortyapi.com/api/character/?species=alien&gender=genderless",
+							"protocol": "https",
+							"host": [
+								"rickandmortyapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"character",
+								""
+							],
+							"query": [
+								{
+									"key": "species",
+									"value": "alien"
+								},
+								{
+									"key": "gender",
+									"value": "genderless"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "character89",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rickandmortyapi.com/api/character/avatar/89.jpeg",
+							"protocol": "https",
+							"host": [
+								"rickandmortyapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"character",
+								"avatar",
+								"89.jpeg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "character399",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rickandmortyapi.com/api/character/avatar/399.jpeg",
+							"protocol": "https",
+							"host": [
+								"rickandmortyapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"character",
+								"avatar",
+								"399.jpeg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "character400",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rickandmortyapi.com/api/character/avatar/400.jpeg",
+							"protocol": "https",
+							"host": [
+								"rickandmortyapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"character",
+								"avatar",
+								"400.jpeg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locaation",
+			"item": [
+				{
+					"name": "Fantasy Dimension",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rickandmortyapi.com/api/location/14",
+							"protocol": "https",
+							"host": [
+								"rickandmortyapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"location",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Episod",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "charecter",
+			"value": "https://rickandmortyapi.com/api/character",
+			"type": "string"
+		}
+	]
+}
