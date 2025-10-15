@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "4a8553d5-74f9-498c-a223-50b25e4cfbbc",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44593204"
+	},
+	"item": [
+		{
+			"name": "chek link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://trello.com",
+					"protocol": "https",
+					"host": [
+						"trello",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creat a board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "API task 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "API task 2",
+							"description": "API task",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "{{key}}",
+							"description": "f440a99b1a5f1a398a694abaec53fad0"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"description": "ATTA367c486fe02188d23300b7a6b9246f22be0845c780ec06c706897f821e807e5fCD1E332F"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check a board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/boards?id=68416c1008e91d0a6b23ae40",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"boards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "68416c1008e91d0a6b23ae40"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lists on a Board",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/68416c1008e91d0a6b23ae40/lists?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"68416c1008e91d0a6b23ae40",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=68416c1008e91d0a6b23ae91&key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "68416c1008e91d0a6b23ae91"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "Postman task",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cards on a Board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/68416c1008e91d0a6b23ae40/cards?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"68416c1008e91d0a6b23ae40",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change card name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f?name=Postman task&key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Postman task"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Checklist on a Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f/checklists?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f",
+						"checklists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Checkitem on Checklist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/6841720f74461edb1a69dd8c/checkItems?name=Create board&key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"6841720f74461edb1a69dd8c",
+						"checkItems"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Create board"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Checkitems on a Checklist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/6841720f74461edb1a69dd8c/checkItems?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"6841720f74461edb1a69dd8c",
+						"checkItems"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Update a checkItem on a Card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f/checkItem/68419c3d93108e2d2fc5110d?key={{key}}&token={{token}}&state=complete",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f",
+						"checkItem",
+						"68419c3d93108e2d2fc5110d"
+					],
+					"query": [
+						{
+							"key": "pos",
+							"value": "16384",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "state",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Card MOVE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f?key={{key}}&token={{token}}&idList=68416c1008e91d0a6b23ae92",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idList",
+							"value": "68416c1008e91d0a6b23ae92"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Checkitem on Checklist 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/6841720f74461edb1a69dd8c/checkItems?name=Move card&key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"6841720f74461edb1a69dd8c",
+						"checkItems"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Move card"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "state",
+							"value": "complete",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Update a checkItem on a Card Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f/checkItem/68419e874b56441d9a2e1ee9?key={{key}}&token={{token}}&state=complete",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f",
+						"checkItem",
+						"68419e874b56441d9a2e1ee9"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "pos",
+							"value": "16384",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Checkitem on Checklist 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/checklists/6841720f74461edb1a69dd8c/checkItems?name=Complete task&key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"checklists",
+						"6841720f74461edb1a69dd8c",
+						"checkItems"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Complete task"
+						},
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "state",
+							"value": "complete",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Update a checkItem on a Card Copy 2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f/checkItem/68419eff4410a7dcea96838c?key={{key}}&token={{token}}&state=complete",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f",
+						"checkItem",
+						"68419eff4410a7dcea96838c"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "state",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Card MOVE 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f?key={{key}}&token={{token}}&idList=68416c1008e91d0a6b23ae93",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idList",
+							"value": "68416c1008e91d0a6b23ae93"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/68417186c26d6d9334e5935f?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"68417186c26d6d9334e5935f"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/68416c1008e91d0a6b23ae40?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"68416c1008e91d0a6b23ae40"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://trello.com",
+			"type": "string"
+		},
+		{
+			"key": "MyToken",
+			"value": "ATTA367c486fe02188d23300b7a6b9246f22be0845c780ec06c706897f821e807e5fCD1E332F",
+			"type": "string"
+		},
+		{
+			"key": "baseURL",
+			"value": "https://trello.com"
+		}
+	]
+}
